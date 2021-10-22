@@ -218,8 +218,36 @@ const task5d = (mult) => {
     console.log(sum)
   }
 
-const task5e = (mult) => {
-}
+  const task5e = (tab, stringOrNumber) => {
+
+    let resultNumber = 0
+    let resultString = ''
+  
+    if (tab.length === 0) {
+      console.log(`tablica jest pusta`)
+    } else if (stringOrNumber !== 'string' && stringOrNumber !== 'number') {
+      console.log(`Drugi parametr jest nieprawidłowy`)
+    } else if (stringOrNumber === 'number') {
+      for (i = 0; i < tab.length; i++) {
+        if (typeof tab[i] === 'number') {
+          resultNumber += tab[i]
+        }
+      }
+      console.log(resultNumber)
+    } else if (stringOrNumber === 'string') {
+      for (i = 0; i < tab.length; i++) {
+        if (typeof tab[i] === 'string') {
+          resultString += tab[i]
+        }
+  
+      }
+      console.log(resultString)
+    }
+  }
+ 
+/*task5e([1, 2, 'Maria', 3, 4, 'Jan'], 'string')*/
+/*task5e([1, 2, 'Maria', 3, 4, 'Jan'], 'number')*/
+  
 
 const task5f = (tab) => {
 
